@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Usage Instructions</title>
+
+<style type="text/css">body{width:750px;margin:36px auto 20px auto;font:16px/25px Georgia,Times,'Times New Roman',serif}a:link,a:visited{color:#2f6eb9;text-decoration:none}a:hover,a:active{text-decoration:underline}h1,h2,h3,h4,h5,h6{margin:40px 0 30px 0;color:#000;font-weight:bold;font-family:Arial,sans-serif}h1{margin-top:80px;font-size:2.2em}code{padding:0 3px;background:#eee}pre code{padding:0}pre{padding:9px;background:#eee;border:1px solid #ccc}ul{list-style:square}p.first{font-size:21px}p.second{font-size:15px}ul.space li{margin-bottom:10px}.section{overflow:hidden}.columns-2{float:left;width:350px;margin:0 0 21px 25px}.columns-3{float:left;width:230px;margin:0 0 21px 20px}</style>
+
+</head>
+<body>
+
+<h1>Usage Instructions</h1>
+ 
+<h2>Theme Installation</h2>
+<p>Login to your WordPress administration and go to <b>Appearance > Themes > Add New > Upload Theme</b>. Click browse to select a theme.zip you downloaded, click install and then activate to start using theme.</p>
+ 
+ 
+<h2>Content Slider</h2>
+
+<p>There are two parts of setting up slider, the first one is in Theme Options, and the second one is creating sticky posts.</p>
+<h4>First part - theme options</h4>
+<ol>
+	<li>Go to <b>Appearance / Theme Options / Slider</b></li>
+	<li>Check <b>Enable content slider (checked - enabled)</b></li>	
+</ol>
+
+<h4>Part two: Creating sticky posts</h4>
+
+<p>To create sticky post you can either create new post or use existing one, and make it sticky by checking "Stick this post to the front page" in the right column, like on the image below: 
+<br />
+<br />
+<img src="admin/images/sticky.png" title="Setting Featured Posts" />
+<br />
+<br />
+
+You also need to set image for the slider. 
+In the right column you'll see <b>"Featured Image"</b>.</p>
+
+<img src="admin/images/z-featured.png" title="Featured Images" />
+
+<p>Click on <b>Set featured image</b>, and image uploader will pop up. Drag your image to the uploader (or select image from file browser), and click <b>"Set Featured Image" in the right corner below.</b></p>
+
+<p>Now just click update or publish, and the post will appear in slider.</p>
+
+
+<h2>Child themes</h2>
+
+<p>This theme is a parent theme, and all customizations should be done via child theme.</p>
+
+<ul>
+	<li>Create a theme folder in your <code>/wp-content/themes</code> directory called <code>my-child</code>.</li>
+	<li>After that create a <code>style.css</code> file in <code>/wp-content/themes/my-child</code> folder.</li>
+	<li>At the top of your <code>style.css</code> file, add the informations below.</li>
+</ul>
+
+<pre><code>/**
+ * Theme Name: My Child
+ * Theme URI: http://link-to-your-site.com
+ * Description: Describe your child theme.
+ * Version: 1.0
+ * Author: Your Name
+ * Author URI: http://link-to-your-site.com
+ * Tags: Some, Tags
+ * Template: ParentThemeName
+ */</code></pre>
+
+<p>After that you might want to import all the styles from parent theme.</p>
+
+<pre><code>@import url( '../ParentThemeFolderName/style.css' );
+
+/* Custom code goes below here. */</code></pre>
+
+<p>This is officially-supported way of modifying themes in WordPress.</p>
+
+
+<h2>Localization / Translation</h2>
+<p>To translate theme to another language, use swt.pot file from theme/languages folder. We recommend using <a href="http://poedit.net/download">Poedit</a> for this purpose. Open swt.pot using Poedit, click File / Save as and name it <b>swt-de_DE</b> (de_DE is for German translation, en_US for English American etc...). Off course, your site needs to be <a href="http://codex.wordpress.org/Installing_WordPress_in_Your_Language">running in the same language</a>.</p>
+
+<h2>Support + Changing / Removing Footer Link</h2>
+<p>In order to change/remove footer link, you must purchase theme on <a href="http://www.simplewpthemes.com">www.simplewpthemes.com</a>, and you'll also get access to <a href="http://www.simplewpthemes.com/support/">support forum</a> at the same time. To remove error message which is caused by editing footer link, just restore theme files via FTP.</p>
+<hr />
+<p>Thank you for using our theme! <a href="http://www.simplewpthemes.com" title="Free WP Themes">SimpleWpThemes.com</a></p>
+
+
+</body>
+</html>
